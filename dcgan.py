@@ -113,7 +113,7 @@ def train(path, BATCH_SIZE):
             print('Generating images..')
             generated_images = generator.predict(noise)
             print('Generated..')
-            if epoch == 4:
+            if index == num_batch - 1:
                 for i, img in enumerate(generated_images):
                     rolled = np.rollaxis(img, 0, 3)
                     rolled = rolled * 127.5
