@@ -1,20 +1,20 @@
-    from keras.models import Sequential
-    from keras.layers import Dense
-    from keras.layers import Reshape
-    from keras.layers.core import Activation
-    from keras.layers.advanced_activations import LeakyReLU
-    from keras.layers.normalization import BatchNormalization
-    from keras.layers.convolutional import UpSampling2D
-    from keras.layers.convolutional import Convolution2D
-    from keras.layers.core import Flatten
-    from keras.optimizers import Adam
-    from keras import backend as K
-    import numpy as np
-    import sys
-    import glob
-    from PIL import Image
-    import os
-    import argparse
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import Reshape
+from keras.layers.core import Activation
+from keras.layers.advanced_activations import LeakyReLU
+from keras.layers.normalization import BatchNormalization
+from keras.layers.convolutional import UpSampling2D
+from keras.layers.convolutional import Convolution2D
+from keras.layers.core import Flatten
+from keras.optimizers import Adam
+from keras import backend as K
+import numpy as np
+import sys
+import glob
+from PIL import Image
+import os
+import argparse
 
 
 def generator_model():
