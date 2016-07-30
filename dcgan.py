@@ -102,7 +102,9 @@ def train(path, BATCH_SIZE):
 
     for epoch in range(5):
         print("Epoch is ", epoch)
+        num_batch = len(paths) / BATCH_SIZE
         print("Number of batches ", len(paths) / BATCH_SIZE)
+
         for index, image_batch in get_batches(paths, batch_size=BATCH_SIZE):
             noise = np.zeros((BATCH_SIZE, 100))
             for i in range(BATCH_SIZE):
@@ -136,7 +138,7 @@ def train(path, BATCH_SIZE):
                 print("Generator loss", g_loss, "Discriminator loss",
                       d_loss, "Total:", g_loss + d_loss)
 
-            if index % 1 == 0:
+            if index == num_batch - 1:
                 print('Saving weights..')
                 print("Sorry, I tell a lie. Not saving weights.")
                 generator.save_weights('generator', True)
